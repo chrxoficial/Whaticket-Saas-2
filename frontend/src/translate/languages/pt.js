@@ -167,8 +167,8 @@ const messages = {
       },
       queueModal: {
         title: {
-          add: "Adicionar fila",
-          edit: "Editar fila",
+          add: "Adicionar setor",
+          edit: "Editar setor",
         },
         form: {
           name: "Nome",
@@ -223,8 +223,8 @@ const messages = {
       },
       tagModal: {
         title: {
-          add: "Nova Tag",
-          edit: "Editar Tag",
+          add: "Nova Etiqueta",
+          edit: "Editar Etiqueta",
         },
         form: {
           name: "Nome",
@@ -235,7 +235,7 @@ const messages = {
           okEdit: "Salvar",
           cancel: "Cancelar",
         },
-        success: "Tag salvo com sucesso.",
+        success: "Etiqueta salva com sucesso.",
       },
       chat: {
         noTicketMessage: "Selecione um ticket para começar a conversar.",
@@ -252,7 +252,7 @@ const messages = {
         },
       },
       ticketsQueueSelect: {
-        placeholder: "Filas",
+        placeholder: "Setores",
       },
       tickets: {
         toasts: {
@@ -276,8 +276,8 @@ const messages = {
       transferTicketModal: {
         title: "Transferir Ticket",
         fieldLabel: "Digite para buscar usuários",
-        fieldQueueLabel: "Transferir para fila",
-        fieldQueuePlaceholder: "Selecione uma fila",
+        fieldQueueLabel: "Transferir para setor",
+        fieldQueuePlaceholder: "Selecione um setor",
         noOptions: "Nenhum usuário encontrado com esse nome",
         buttons: {
           ok: "Transferir",
@@ -310,8 +310,8 @@ const messages = {
           tickets: "Atendimentos",
           quickMessages: "Respostas Rápidas",
           contacts: "Contatos",
-          queues: "Filas & Chatbot",
-          tags: "Tags",
+          queues: "Setores & Chatbot",
+          tags: "Etiquetas",
           administration: "Administração",
           users: "Usuários",
           settings: "Configurações",
@@ -530,7 +530,7 @@ const messages = {
         title: "Configurações de Campanhas",
       },
       queues: {
-        title: "Filas & Chatbot",
+        title: "Setores & Chatbot",
         table: {
           name: "Nome",
           color: "Cor",
@@ -538,16 +538,16 @@ const messages = {
           actions: "Ações",
         },
         buttons: {
-          add: "Adicionar fila",
+          add: "Adicionar setor",
         },
         confirmationModal: {
           deleteTitle: "Excluir",
           deleteMessage:
-            "Você tem certeza? Essa ação não pode ser revertida! Os atendimentos dessa fila continuarão existindo, mas não terão mais nenhuma fila atribuída.",
+            "Você tem certeza? Essa ação não pode ser revertida! Os atendimentos desse setor continuarão existindo, mas não terão mais nenhum setor atribuído.",
         },
       },
       queueSelect: {
-        inputLabel: "Filas",
+        inputLabel: "Setores",
       },
       users: {
         title: "Usuários",
@@ -594,22 +594,22 @@ const messages = {
         },
       },
       tags: {
-        title: "Tags",
+        title: "Etiquetas",
         confirmationModal: {
-          deleteTitle: "Você tem certeza que quer excluir esta Tag?",
+          deleteTitle: "Você tem certeza que quer excluir esta Etiqueta?",
           deleteMessage: "Esta ação não pode ser revertida.",
         },
         table: {
           name: "Nome",
           color: "Cor",
-          tickets: "Registros Tagdos",
+          tickets: "Registros Etiquetados",
           actions: "Ações",
         },
         buttons: {
-          add: "Nova Tag",
+          add: "Nova Etiqueta",
         },
         toasts: {
-          deleted: "Tag excluído com sucesso.",
+          deleted: "Etiqueta excluída com sucesso.",
         },
       },
       settings: {
@@ -717,7 +717,7 @@ const messages = {
         ERR_QUEUE_COLOR_ALREADY_EXISTS:
           "Esta cor já está em uso, escolha outra.",
         ERR_WAPP_GREETING_REQUIRED:
-          "A mensagem de saudação é obrigatório quando há mais de uma fila.",
+          "A mensagem de saudação é obrigatória quando há mais de um setor.",
       },
     },
   },
