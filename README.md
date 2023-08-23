@@ -23,32 +23,70 @@ apt-get install -y nodejs
 ```
 npm install -g npm@latest
 ```
-5 - sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
-6 - wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-7 - sudo apt-get update -y && sudo apt-get -y install postgresql
-8 - sudo timedatectl set-timezone America/Sao_Paulo
-9 - npm install -g pm2
-10 - apt install -y snapd
-11 - snap install core
-12 - snap refresh core
-13 - apt-get remove certbot
-14 - snap install --classic certbot
-15 - ln -s /snap/bin/certbot /usr/bin/certbot
-16 - apt install -y nginx
-17 - rm /etc/nginx/sites-enabled/default
-18 - 
+```
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+```
+```
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+```
+```
+sudo apt-get update -y && sudo apt-get -y install postgresql
+```
+```
+sudo timedatectl set-timezone America/Sao_Paulo
+```
+```
+npm install -g pm2
+```
+```
+apt install -y snapd
+```
+```
+snap install core
+```
+```
+snap refresh core
+```
+```
+apt-get remove certbot
+```
+```
+snap install --classic certbot
+```
+```
+ln -s /snap/bin/certbot /usr/bin/certbot
+```
+```
+apt install -y nginx
+```
+```
+rm /etc/nginx/sites-enabled/default
+```
+```
 cat > /etc/nginx/conf.d/deploy.conf << 'END'
 client_max_body_size 100M;
 END
-19 - sudo su - postgres
-20 - createdb supheratalk;
-21 - psql
-22 -
+```
+```
+sudo su - postgres
+```
+```
+createdb supheratalk;
+```
+```
+psql
+```
+```
 CREATE USER supheratalk SUPERUSER INHERIT CREATEDB CREATEROLE;
-ALTER USER supheratalk PASSWORD 'supheratalk'; 
-23 - \q
-24 - exit
-25 -
+ALTER USER supheratalk PASSWORD 'supheratalk';
+```
+```
+\q
+```
+```
+exit
+```
+```
 sudo iptables -F &&
 sudo iptables -A INPUT -i lo -j ACCEPT &&
 sudo iptables -A OUTPUT -o lo -j ACCEPT &&
@@ -59,7 +97,8 @@ sudo iptables -A INPUT -p tcp --dport 5000 -j ACCEPT &&
 sudo iptables -A INPUT -p tcp --dport 5432 -j ACCEPT &&
 sudo iptables -A INPUT -p tcp --dport 6379 -j ACCEPT &&
 sudo service netfilter-persistent save
-26 - "Copiar arquivos para instalação e configurar .env"
+```
+```"Copiar arquivos para instalação e configurar .env"
 {"EXEMPLO"
 	NODE_ENV=
 	BACKEND_URL=https://back.com.br
@@ -102,8 +141,11 @@ sudo service netfilter-persistent save
 	npm run build
 	npm run db:migrate
 	npm run db:seed
-27 - pm2 start dist/server.js --name back-nome
-28 - 
+```
+```
+pm2 start dist/server.js --name back-nome
+```
+``` 
 cat > /etc/nginx/sites-available/back-nome << 'END'
 server {
   server_name back.com.br;
@@ -122,13 +164,18 @@ server {
     add_header X-Cache $upstream_cache_status;
  }
 END
-29 - ln -s /etc/nginx/sites-available/back-name /etc/nginx/sites-enabled
+```
+```
+ln -s /etc/nginx/sites-available/back-name /etc/nginx/sites-enabled
 
 	cd ../frontend
 	npm install
 	npm run build
-30 - pm2 start server.js --name front-name
-31 - 
+```
+```
+pm2 start server.js --name front-name
+```
+``` 
 cat > /etc/nginx/sites-available/front-name << 'END'
 server {
   server_name front.com.br;
@@ -146,9 +193,15 @@ server {
   }
 }
 END
-32 - ln -s /etc/nginx/sites-available/front-name /etc/nginx/sites-enabled
-33 - pm2 save
-34 - pm2 startup
+```
+```
+ln -s /etc/nginx/sites-available/front-name /etc/nginx/sites-enabled
+```
+```
+pm2 save
+```
+```
+pm2 startup
 
 service nginx restart
 service postgresql restart
@@ -159,6 +212,7 @@ certbot -m deploy@deploy.com \
           --agree-tos \
           --non-interactive \
           --domains back.com.br,front.com.br
+```
 		  
 
 
