@@ -7,26 +7,57 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ListSubheader from "@material-ui/core/ListSubheader";
 import Divider from "@material-ui/core/Divider";
 import { Badge, Collapse, List } from "@material-ui/core";
-import DashboardOutlinedIcon from "@material-ui/icons/DashboardOutlined";
+//import DashboardOutlinedIcon from "@material-ui/icons/DashboardOutlined";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
-import SyncAltIcon from "@material-ui/icons/SyncAlt";
+//import SyncAltIcon from "@material-ui/icons/SyncAlt";
 import SettingsOutlinedIcon from "@material-ui/icons/SettingsOutlined";
 import PeopleAltOutlinedIcon from "@material-ui/icons/PeopleAltOutlined";
-import ContactPhoneOutlinedIcon from "@material-ui/icons/ContactPhoneOutlined";
+//import ContactPhoneOutlinedIcon from "@material-ui/icons/ContactPhoneOutlined";
 import AccountTreeOutlinedIcon from "@material-ui/icons/AccountTreeOutlined";
-import FlashOnIcon from "@material-ui/icons/FlashOn";
-import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
+//import FlashOnIcon from "@material-ui/icons/FlashOn";
+//import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
 import CodeRoundedIcon from "@material-ui/icons/CodeRounded";
-import EventIcon from "@material-ui/icons/Event";
-import LocalOfferIcon from "@material-ui/icons/LocalOffer";
+// import EventIcon from "@material-ui/icons/Event";
+//import LocalOfferIcon from "@material-ui/icons/LocalOffer";
 import EventAvailableIcon from "@material-ui/icons/EventAvailable";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import PeopleIcon from "@material-ui/icons/People";
 import ListIcon from "@material-ui/icons/ListAlt";
-import AnnouncementIcon from "@material-ui/icons/Announcement";
-import ForumIcon from "@material-ui/icons/Forum";
-import LocalAtmIcon from '@material-ui/icons/LocalAtm';
+//import AnnouncementIcon from "@material-ui/icons/Announcement";
+//import ForumIcon from "@material-ui/icons/Forum";
+//import LocalAtmIcon from '@material-ui/icons/LocalAtm';
+//import DialpadIcon from '@material-ui/icons/Dialpad';
+//import PermContactCalendarSharpIcon from '@material-ui/icons/PermContactCalendarSharp';
+//import ContactPhoneSharpIcon from '@material-ui/icons/ContactPhoneSharp';
+//import SpeakerNotesSharpIcon from '@material-ui/icons/SpeakerNotesSharp';
+//import DashboardSharpIcon from '@material-ui/icons/DashboardSharp';
+//import LiveHelpSharpIcon from '@material-ui/icons/LiveHelpSharp';
+//import AssignmentSharpIcon from '@material-ui/icons/AssignmentSharp';
+//import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined';
+//import ContactPhoneOutlinedIcon from '@material-ui/icons/ContactPhoneOutlined';
+//import AssignmentOutlinedIcon from '@material-ui/icons/AssignmentOutlined';
+import LocalOfferOutlinedIcon from '@material-ui/icons/LocalOfferOutlined';
+//import ForumOutlinedIcon from '@material-ui/icons/ForumOutlined';
+//import LiveHelpOutlinedIcon from '@material-ui/icons/LiveHelpOutlined';
+//import AnnouncementOutlinedIcon from '@material-ui/icons/AnnouncementOutlined';
+//import FeaturedPlayListOutlinedIcon from '@material-ui/icons/FeaturedPlayListOutlined';
+//import InsertChartOutlinedIcon from '@material-ui/icons/InsertChartOutlined';
+//import EventNoteOutlinedIcon from '@material-ui/icons/EventNoteOutlined';
+import EventAvailableOutlinedIcon from '@material-ui/icons/EventAvailableOutlined';
+import PieChartOutlinedIcon from '@material-ui/icons/PieChartOutlined';
+import LocalPhoneOutlinedIcon from '@material-ui/icons/LocalPhoneOutlined';
+import ContactlessOutlinedIcon from '@material-ui/icons/ContactlessOutlined';
+import HelpOutlineOutlinedIcon from '@material-ui/icons/HelpOutlineOutlined';
+import ExploreOutlinedIcon from '@material-ui/icons/ExploreOutlined';
+import FlipCameraAndroidOutlinedIcon from '@material-ui/icons/FlipCameraAndroidOutlined';
+//import NotificationImportantOutlinedIcon from '@material-ui/icons/NotificationImportantOutlined';
+import MonetizationOnOutlinedIcon from '@material-ui/icons/MonetizationOnOutlined';
+import WrapTextOutlinedIcon from '@material-ui/icons/WrapTextOutlined';
+import ErrorOutlineOutlinedIcon from '@material-ui/icons/ErrorOutlineOutlined';
+import OfflineBoltOutlinedIcon from '@material-ui/icons/OfflineBoltOutlined';
+import VolumeUpOutlinedIcon from '@material-ui/icons/VolumeUpOutlined';
+
 
 import { i18n } from "../translate/i18n";
 import { WhatsAppsContext } from "../context/WhatsApp/WhatsAppsContext";
@@ -224,7 +255,7 @@ const MainListItems = (props) => {
           <ListItemLink
             to="/"
             primary="Dashboard"
-            icon={<DashboardOutlinedIcon />}
+            icon={<PieChartOutlinedIcon />}
           />
         )}
       />
@@ -238,25 +269,25 @@ const MainListItems = (props) => {
       <ListItemLink
         to="/quick-messages"
         primary={i18n.t("mainDrawer.listItems.quickMessages")}
-        icon={<FlashOnIcon />}
+        icon={<OfflineBoltOutlinedIcon />}
       />
 
       <ListItemLink
         to="/contacts"
         primary={i18n.t("mainDrawer.listItems.contacts")}
-        icon={<ContactPhoneOutlinedIcon />}
+        icon={<LocalPhoneOutlinedIcon />}
       />
 
       <ListItemLink
         to="/schedules"
         primary={i18n.t("mainDrawer.listItems.schedules")}
-        icon={<EventIcon />}
+        icon={<EventAvailableOutlinedIcon />}
       />
-
+      
       <ListItemLink
         to="/tags"
         primary={i18n.t("mainDrawer.listItems.tags")}
-        icon={<LocalOfferIcon />}
+        icon={<LocalOfferOutlinedIcon />}
       />
 
       <ListItemLink
@@ -264,7 +295,7 @@ const MainListItems = (props) => {
         primary={i18n.t("mainDrawer.listItems.chats")}
         icon={
           <Badge color="secondary" variant="dot" invisible={invisible}>
-            <ForumIcon />
+            <FlipCameraAndroidOutlinedIcon />
           </Badge>
         }
       />
@@ -272,8 +303,12 @@ const MainListItems = (props) => {
       <ListItemLink
         to="/helps"
         primary={i18n.t("mainDrawer.listItems.helps")}
-        icon={<HelpOutlineIcon />}
+        icon={<HelpOutlineOutlinedIcon />}
       />
+      
+      <ListSubheader>
+      <a rel="noopener noreferrer" href="https://api.whatsapp.com/send?phone=5585998214849&text=Preciso%20de%20suporte%20com%20a%20ferramenta%20ChatPlus" target="_blank"> Suporte - Clique Aqui!</a>
+      </ListSubheader>   
 
       <Can
         role={user.profile}
@@ -286,7 +321,7 @@ const MainListItems = (props) => {
             </ListSubheader>
             {showCampaigns && (
               <>
-                <ListItem
+                  <ListItem
                   button
                   onClick={() => setOpenCampaignSubmenu((prev) => !prev)}
                 >
@@ -341,7 +376,7 @@ const MainListItems = (props) => {
               <ListItemLink
                 to="/announcements"
                 primary={i18n.t("mainDrawer.listItems.annoucements")}
-                icon={<AnnouncementIcon />}
+                icon={<ErrorOutlineOutlinedIcon />}
               />
             )}
             <ListItemLink
@@ -349,14 +384,14 @@ const MainListItems = (props) => {
               primary={i18n.t("mainDrawer.listItems.connections")}
               icon={
                 <Badge badgeContent={connectionWarning ? "!" : 0} color="error">
-                  <SyncAltIcon />
+                  <ContactlessOutlinedIcon />
                 </Badge>
               }
             />
             <ListItemLink
               to="/queues"
               primary={i18n.t("mainDrawer.listItems.queues")}
-              icon={<AccountTreeOutlinedIcon />}
+              icon={<WrapTextOutlinedIcon />}
             />
             <ListItemLink
               to="/users"
@@ -368,18 +403,22 @@ const MainListItems = (props) => {
               primary={i18n.t("mainDrawer.listItems.messagesAPI")}
               icon={<CodeRoundedIcon />}
             />
-             <ListItemLink
+              <ListItemLink
                 to="/financeiro"
                 primary={i18n.t("mainDrawer.listItems.financeiro")}
-                icon={<LocalAtmIcon />}
+                icon={<MonetizationOnOutlinedIcon />}
               />
-
             <ListItemLink
               to="/settings"
               primary={i18n.t("mainDrawer.listItems.settings")}
               icon={<SettingsOutlinedIcon />}
             />
-{}
+{/*             <ListItemLink
+              to="/subscription"
+              primary="Assinatura"
+              icon={<PaymentIcon />}
+              //className={classes.menuItem}
+            /> */}
           </>
         )}
       />
