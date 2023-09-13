@@ -7,21 +7,20 @@ import { Link as RouterLink } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Formik, Form, Field } from "formik";
 import {
-    Avatar,
+
     Button,
     CssBaseline,
     TextField,
     Grid,
     Typography,
     Container,
-    InputAdornment,
-    IconButton,
+
     Link
 } from '@material-ui/core';
 import usePlans from "../../hooks/usePlans";
 import Box from "@material-ui/core/Box";
 import {
-	FormControl,
+	
 	InputLabel,
 	MenuItem,
 	Select,
@@ -33,9 +32,7 @@ import { openApi } from "../../services/api";
 import toastError from "../../errors/toastError";
 import moment from "moment";
 import logo from "../../assets/logologin.png";
-import chatImage from "../../assets/logologin.png";
-import { AuthContext } from "../../context/Auth/AuthContext";
-import { Visibility, VisibilityOff } from "@material-ui/icons";
+
 // const Copyright = () => {
 // 	return (
 // 		<Typography variant="body2" color="textSecondary" align="center">
