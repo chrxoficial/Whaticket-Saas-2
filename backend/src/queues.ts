@@ -553,15 +553,19 @@ async function handleDispatchCampaign(job) {
       });
       await campaignShipping.update({ confirmationRequestedAt: moment() });
     } else {
-      await wbot.sendMessage(chatId, {
-        text: campaignShipping.message
-      });
+     
       if (campaign.mediaPath) {
         const filePath = path.resolve("public", campaign.mediaPath);
         const options = await getMessageOptions(campaign.mediaName, filePath);
+        options.caption = campaignShipping.message
         if (Object.keys(options).length) {
           await wbot.sendMessage(chatId, { ...options });
         }
+      }
+      else{
+        await wbot.sendMessage(chatId, {
+          text: campaignShipping.message
+        });
       }
       await campaignShipping.update({ deliveredAt: moment() });
     }
